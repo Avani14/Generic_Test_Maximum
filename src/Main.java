@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -31,7 +34,7 @@ public class Main {
 
         // Generic method
 //        GenericsService<String> generic = new GenericsService<>();
-        String str1 = "Apple",str2 = "Peach",str3 = "Banana";
+        String str1 = "A",str2 = "AA",str3 = "AAA";
 //        System.out.println("str1 :"+str1+" str2 : "+str2+" str3 :"+str3);
 //        System.out.println("The maximum number is"+generic.maximum(str1,str2,str3));
 //        System.out.println("str1 :"+str1+" num2 : "+str3+" str3 :"+str2);
@@ -40,7 +43,13 @@ public class Main {
 //        System.out.println("The maximum number is "+generic.maximum(str3,str1,str2));
 
         //Generic class
+        int option;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number");
+        option = sc.nextInt();
+        ArrayList<String> arrayOfString = new ArrayList<>();
+
         GenericsService<String> genericClass = new GenericsService<>(str1,str2,str3);
-        System.out.println((String) genericClass.testMaximum(str1,str2,str3));
+        System.out.println((String) genericClass.testMaximum(arrayOfString));
     }
 }
