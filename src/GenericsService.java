@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class GenericsService<E extends Comparable> {
     E var1;
@@ -44,7 +45,10 @@ public class GenericsService<E extends Comparable> {
         return max;
     }
 
-    public <E extends Comparable<E>> E testMaximum(ArrayList<E> arrayOfString) {
-        arrayOfString.sort();
+    public <E extends Comparable<E>> void testMaximum(ArrayList<E> arrayOfString) {
+       Collections.sort(arrayOfString);
+        for (E a:arrayOfString) {
+            System.out.print(" "+a);
+        }
     }
 }

@@ -47,9 +47,14 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the number");
         option = sc.nextInt();
+        String value = new String();
         ArrayList<String> arrayOfString = new ArrayList<>();
-
+        for (int i = 0; i < option; i++) {
+            System.out.println("Enter the string");
+            value = sc.next();
+            arrayOfString.add(value);
+        }
         GenericsService<String> genericClass = new GenericsService<>(str1,str2,str3);
-        System.out.println((String) genericClass.testMaximum(arrayOfString));
+        genericClass.testMaximum(arrayOfString);
     }
 }
