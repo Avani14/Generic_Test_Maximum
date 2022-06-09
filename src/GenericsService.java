@@ -11,4 +11,10 @@ public class GenericsService<E> {
         max = max>num3?max:num3;
         return max;
     }
+    public String maximum(String str1,String str2, String str3)
+    {
+        String max = str1.length()>str2.length()?str1:str2;
+        max = max.length()>str3.length()?max:str3;
+        return max;
+    }
 }
