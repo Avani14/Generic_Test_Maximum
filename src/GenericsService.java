@@ -1,4 +1,16 @@
 public class GenericsService<E extends Comparable> {
+    E var1;
+    E var2;
+    E var3;
+
+
+
+    public GenericsService(E var1, E var2, E var3)
+    {
+        this.var1 = var1;
+        this.var2 = var2;
+        this.var3 = var3;
+    }
     public int maximum(int num1,int num2, int num3)
     {
         int max = num1>num2?num1:num2;
@@ -18,6 +30,12 @@ public class GenericsService<E extends Comparable> {
         return max;
     }
     public <E extends Comparable<E>> E genericMaximum (E var1, E var2, E var3)
+    {
+        E max = var1.compareTo(var2)>0?var1:var2;
+        max = max.compareTo(var3)>0 ? max:var3;
+        return max;
+    }
+    public static  <E extends Comparable<E>> E testMaximum(E var1, E var2, E var3)
     {
         E max = var1.compareTo(var2)>0?var1:var2;
         max = max.compareTo(var3)>0 ? max:var3;
