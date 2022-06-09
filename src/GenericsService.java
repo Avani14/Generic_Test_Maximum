@@ -1,4 +1,4 @@
-public class GenericsService<E> {
+public class GenericsService<E extends Comparable> {
     public int maximum(int num1,int num2, int num3)
     {
         int max = num1>num2?num1:num2;
@@ -15,6 +15,12 @@ public class GenericsService<E> {
     {
         String max = str1.length()>str2.length()?str1:str2;
         max = max.length()>str3.length()?max:str3;
+        return max;
+    }
+    public <E extends Comparable<E>> E genericMaximum (E var1, E var2, E var3)
+    {
+        E max = var1.compareTo(var2)>0?var1:var2;
+        max = max.compareTo(var3)>0 ? max:var3;
         return max;
     }
 }
