@@ -19,14 +19,24 @@ public class Main {
         System.out.println("The maximum number is "+gsFloat.maximum(numF1,numF3,numF2));
         System.out.println("num1 :"+numF3+" num2 : "+numF1+" num3 :"+numF2);
         System.out.println("The maximum number is "+gsFloat.maximum(numF3,numF1,numF2));
-        System.out.println("---Float Testing---");
-        GenericsService<String> gsString = new GenericsService<>();
+//        System.out.println("---String Testing---");
+//        GenericsService<String> gsString = new GenericsService<>();
+//        String str1 = "Apple",str2 = "Peach",str3 = "Banana";
+//        System.out.println("str1 :"+str1+" str2 : "+str2+" str3 :"+str3);
+//        System.out.println("The maximum number is"+gsString.maximum(str1,str2,str3));
+//        System.out.println("str1 :"+str1+" num2 : "+str3+" str3 :"+str2);
+//        System.out.println("The maximum number is "+gsString.maximum(str1,str3,str2));
+//        System.out.println("str1 :"+str3+" num2 : "+str1+" str3 :"+str2);
+//        System.out.println("The maximum number is "+gsString.maximum(str3,str1,str2));
+
+        // Generic method
+        GenericsService<String> generic = new GenericsService<>();
         String str1 = "Apple",str2 = "Peach",str3 = "Banana";
         System.out.println("str1 :"+str1+" str2 : "+str2+" str3 :"+str3);
-        System.out.println("The maximum number is"+gsString.maximum(str1,str2,str3));
+        System.out.println("The maximum number is"+generic.maximum(str1,str2,str3));
         System.out.println("str1 :"+str1+" num2 : "+str3+" str3 :"+str2);
-        System.out.println("The maximum number is "+gsString.maximum(str1,str3,str2));
+        System.out.println("The maximum number is "+generic.maximum(str1,str3,str2));
         System.out.println("str1 :"+str3+" num2 : "+str1+" str3 :"+str2);
-        System.out.println("The maximum number is "+gsString.maximum(str3,str1,str2));
+        System.out.println("The maximum number is "+generic.maximum(str3,str1,str2));
     }
 }
