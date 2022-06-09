@@ -5,4 +5,10 @@ public class GenericsService<E> {
         max = max>num3?max:num3;
         return max;
     }
+    public float maximum(float num1,float num2, float num3)
+    {
+        float max = num1>num2?num1:num2;
+        max = max>num3?max:num3;
+        return max;
+    }
 }
